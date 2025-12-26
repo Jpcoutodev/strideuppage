@@ -735,6 +735,7 @@ h6 {
 
     .hero-cta {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .hero-stats {
@@ -743,10 +744,34 @@ h6 {
 
     .hero-visual {
         margin-top: 60px;
+        height: 450px;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+    }
+
+    .device-mockup {
+        transform: perspective(1000px) rotateY(0deg) rotateX(5deg);
+    }
+
+    .phone-main {
+        width: 220px;
+        height: 460px;
+    }
+
+    .phone-secondary {
+        display: none;
+    }
+
+    .floating-elements {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
+
+    /* Header & Nav */
     .nav {
         display: none;
     }
@@ -755,16 +780,236 @@ h6 {
         display: block;
     }
 
+    /* Hero Section */
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
     }
 
     .hero-cta {
         flex-direction: column;
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+        padding: 14px 24px;
+    }
+
+    .btn-lg,
+    .btn-xl {
+        font-size: 1rem;
+        padding: 16px 24px;
+    }
+
+    .hero-stats {
+        gap: 24px;
+        padding-top: 24px;
+    }
+
+    .stat-number {
+        font-size: 1.25rem;
+    }
+
+    .hero-visual {
+        height: 350px;
+        margin-top: 40px;
+    }
+
+    .device-mockup {
+        transform: perspective(800px) rotateY(0deg) rotateX(0deg);
+    }
+
+    .phone-main {
+        width: 180px;
+        height: 380px;
+        border-radius: 28px;
+    }
+
+    .ai-scanner {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ai-data {
+        bottom: 20px;
+        left: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .data-item {
+        font-size: 0.7rem;
+    }
+
+    /* Sections */
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-tag {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Cards */
+    .ai-cards,
+    .features-grid,
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ai-card,
+    .feature-card,
+    .community-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .ai-card-icon,
+    .feature-icon,
+    .community-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .ai-card-title,
+    .feature-title,
+    .community-title {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+    }
+
+    .ai-card-text,
+    .feature-text,
+    .community-text {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    /* Privacy Section */
+    .privacy-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 24px;
+    }
+
+    .privacy-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .privacy-title {
+        font-size: 1.5rem;
+    }
+
+    .privacy-toggle {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .toggle-option {
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+    /* Download Section */
+    .download-title {
+        font-size: 2rem;
+    }
+
+    .download-text {
+        font-size: 1rem;
+    }
+
+    .download-badges {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-visual {
+        height: 280px;
+    }
+
+    .phone-main {
+        width: 150px;
+        height: 320px;
+        border-radius: 24px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .download-title {
+        font-size: 1.75rem;
+    }
+
+    .btn-xl {
+        font-size: 0.9rem;
+        padding: 14px 20px;
     }
 }
