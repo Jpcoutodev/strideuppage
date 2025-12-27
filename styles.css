@@ -652,7 +652,8 @@ h6 {
     border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
-.floating-icon i {
+.floating-icon i,
+.floating-icon svg {
     width: 24px;
     height: 24px;
 }
@@ -845,21 +846,21 @@ h6 {
 
 /* AI Cards - Light Green Gradient Theme */
 .section-ai .ai-card {
-    background: linear-gradient(145deg, #ffffff 0%, #ecfdf5 50%, #d1fae5 100%);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+    background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
+    border: 1px solid rgba(74, 222, 128, 0.2);
     color: var(--text-primary);
 }
 
 .section-ai .ai-card:hover {
-    background: linear-gradient(145deg, #ffffff 0%, #d1fae5 50%, #a7f3d0 100%);
-    border-color: rgba(16, 185, 129, 0.5);
-    box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.3),
-        0 10px 20px -10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #ffffff 0%, #dcfce7 100%);
+    border-color: rgba(74, 222, 128, 0.4);
+    box-shadow: 0 20px 40px -15px rgba(22, 101, 52, 0.1),
+        0 10px 20px -10px rgba(0, 0, 0, 0.05);
 }
 
 .section-ai .ai-card-icon {
-    background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
-    color: #ffffff;
+    background: linear-gradient(135deg, #bbf7d0, #86efac);
+    color: #15803d;
 }
 
 .section-ai .ai-card-title {
