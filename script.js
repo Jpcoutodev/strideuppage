@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav');
     const privacyOptions = document.querySelectorAll('.toggle-option');
-    
+
     // Header Scroll Effect
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerOffset = 80;
@@ -79,17 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe all cards and section headers
+    // Observe all cards and section headers for scroll animations
     document.querySelectorAll('.ai-card, .feature-card, .community-card, .section-header, .privacy-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.classList.add('animate-on-scroll');
         observer.observe(el);
     });
 
     // Add CSS class for visibility
     const style = document.createElement('style');
     style.textContent = `
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
         .visible {
             opacity: 1 !important;
             transform: translateY(0) !important;
@@ -101,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background: rgba(10, 10, 15, 0.95);
+                background: rgba(255, 255, 255, 0.95);
                 backdrop-filter: blur(10px);
                 flex-direction: column;
                 padding: 40px 0;
                 transform: translateY(-100%);
                 transition: transform 0.3s ease;
                 z-index: 999;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
             
             .nav.active {
