@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons - with retry for production
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-
-    // Retry icon initialization after full load
-    window.addEventListener('load', () => {
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
-    });
 
     // Elements
     const header = document.getElementById('header');
@@ -52,18 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
-        const icon = nav.classList.contains('active') ? 'x' : 'menu';
-        // Re-render menu icon
-        menuToggle.innerHTML = `<i data-lucide="${icon}"></i>`;
-        lucide.createIcons();
+        const icon = nav.classList.contains('active') ? 'fa-xmark' : 'fa-bars';
+        // Update menu icon
+        menuToggle.innerHTML = `<i class="fa-solid ${icon}"></i>`;
     });
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
-            menuToggle.innerHTML = `<i data-lucide="menu"></i>`;
-            lucide.createIcons();
+            menuToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
         });
     });
 
