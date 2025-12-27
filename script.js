@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    // Initialize Lucide Icons - with retry for production
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // Retry icon initialization after full load
+    window.addEventListener('load', () => {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    });
 
     // Elements
     const header = document.getElementById('header');
@@ -8,12 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('nav');
     const privacyOptions = document.querySelectorAll('.toggle-option');
 
-    // Header Scroll Effect
+    // Header Scroll Effect - hide on scroll down, show on scroll up
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+
+                // Add scrolled class for background
+                if (currentScrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Hide/show header on scroll
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down - hide header
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scrolling up - show header
+                    header.classList.remove('header-hidden');
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+            });
+            ticking = true;
         }
     });
 
