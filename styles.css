@@ -1942,10 +1942,23 @@ i svg,
     .footer-links {
         flex-direction: column;
         gap: 16px;
+        align-items: center;
+        text-align: center;
     }
 
     .footer-bottom {
         font-size: 0.75rem;
+        text-align: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
 
