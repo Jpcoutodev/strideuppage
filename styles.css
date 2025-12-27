@@ -864,8 +864,8 @@ i svg,
 
 /* AI Cards - Light Green Gradient Theme */
 .section-ai .ai-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
-    border: 1px solid rgba(74, 222, 128, 0.2);
+    background: linear-gradient(180deg, #ffffff 0%, #f5fff9 100%);
+    border: 1px solid rgba(74, 222, 128, 0.15);
     color: var(--text-primary);
 }
 
