@@ -656,6 +656,8 @@ h6 {
 .floating-icon svg {
     width: 24px;
     height: 24px;
+    stroke: currentColor;
+    fill: none;
 }
 
 .floating-icon.icon-1 {
@@ -822,6 +824,20 @@ h6 {
     justify-content: center;
     color: var(--green-secondary);
     margin-bottom: 24px;
+}
+
+/* Ensure all icon SVGs are visible */
+.ai-card-icon svg,
+.feature-icon svg,
+.community-icon svg,
+.tech-card-icon svg,
+.privacy-icon svg,
+i svg,
+[data-lucide] svg {
+    stroke: currentColor;
+    fill: none;
+    width: 100%;
+    height: 100%;
 }
 
 .icon-orange {
