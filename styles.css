@@ -656,8 +656,9 @@ h6 {
 .floating-icon svg {
     width: 24px;
     height: 24px;
-    stroke: currentColor;
-    fill: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .floating-icon.icon-1 {
