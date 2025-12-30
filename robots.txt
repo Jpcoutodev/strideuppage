@@ -1,0 +1,17 @@
+# Robots.txt para Stride Up Landing Page
+# https://home.strideup-fit.app/
+
+# Permitir todos os crawlers
+User-agent: *
+Allow: /
+
+# Bloquear acesso a arquivos de build/desenvolvimento
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+
+# Sitemap
+Sitemap: https://home.strideup-fit.app/sitemap.xml
+
+# Crawl-delay (opcional - evita sobrecarga do servidor)
+Crawl-delay: 1
