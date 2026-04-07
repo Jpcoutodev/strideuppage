@@ -282,6 +282,68 @@ h6 {
     font-size: 1.25rem;
 }
 
+/* Google Play Badge */
+.btn-google-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-google-play:hover {
+    background: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.btn-google-play .fa-google-play {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.btn-google-play .play-label {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    text-align: left;
+}
+
+.btn-google-play .play-label small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+}
+
+.btn-google-play .play-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.btn-google-play-xl {
+    padding: 16px 32px;
+}
+
+.btn-google-play-xl .fa-google-play {
+    font-size: 2.5rem;
+}
+
+.btn-google-play-xl .play-label {
+    font-size: 1.5rem;
+}
+
+.btn-google-play-xl .play-label small {
+    font-size: 0.8rem;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -1136,7 +1198,15 @@ i svg,
 }
 
 .download-buttons {
+    margin-bottom: 12px;
+}
+
+.download-note {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-align: center;
     margin-bottom: 32px;
+    opacity: 0.8;
 }
 
 .download-badges {
